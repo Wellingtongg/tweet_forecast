@@ -1,8 +1,9 @@
-class WeatherController < ApplicationController
+require 'open_weather_map_api'
 
+class WeatherController < ApplicationController
   def tweet
     begin
-      forecast = OpenWeatherMapService.get_forecast(tweet_params)
+      forecast = OpenWeatherMapApi.get_forecast(tweet_params)
 
       if forecast.present?
         response = TwitterService.new.tweet_forecast(forecast)
@@ -23,7 +24,8 @@ class WeatherController < ApplicationController
       :lat,
       :lon,
       :units,
-      :lang
+      :lang,
+      :appid
     )
   end
 end
