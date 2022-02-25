@@ -1,24 +1,35 @@
-# README
+## Installation
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```bash
+$ bundle install
+```
 
-Things you may want to cover:
+## Run server
 
-* Ruby version
+```bash
+$ rails s
+```
 
-* System dependencies
+## Test
 
-* Configuration
+```bash
+$ bundle exec rspec
+```
 
-* Database creation
+## Endpoints
 
-* Database initialization
+`weather/tweet`
 
-* How to run the test suite
+```curl
+curl --request POST \
+  --url http://localhost:3000/weather/tweet \
+  --header 'Content-Type: application/json' \
+  --data '{
+		"q": "florianopolis",
+		"units": "metric",
+		"lang": "pt_br",
+		"appid": "XXXXXX"
+	}'
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+*The props for this response is provided on [open_weather_map_api](https://github.com/Wellingtongg/open_weather_map_api)*
