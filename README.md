@@ -4,6 +4,20 @@
 $ bundle install
 ```
 
+## ENV
+
+add to your `.env` file
+```
+TWITTER_API_KEY=<YOUR API KEY>
+TWITTER_API_KEY_SECRET=<YOUR API KEY SECRET>
+TWITTER_ACCESS_TOKEN=<YOUR ACCESS TOKEN>
+TWITTER_ACCESS_TOKEN_SECRET=<YOUR ACCESS TOKEN SECRET>
+
+OPEN_WEATHER_MAP_APP_ID=<YOUR APP ID>
+```
+
+*The OPEN_WEATHER_MAP_APP_ID will be used just in the test*
+
 ## Run server
 
 ```bash
