@@ -25,7 +25,9 @@ class WeatherController < ApplicationController
       :lon,
       :units,
       :lang,
-      :appid
+      :appid,
+      :cnt,
+      :mode
     )
   end
 end
